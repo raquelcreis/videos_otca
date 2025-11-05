@@ -25,14 +25,16 @@
     h1 {
       margin-bottom: 40px;
       font-size: 2em;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
       gap: 20px;
-      max-width: 1200px;
+      justify-items: center;
+      max-width: 1000px;
     }
 
     .thumb {
@@ -84,25 +86,45 @@
       cursor: pointer;
       user-select: none;
     }
+
+        @media (max-width: 1000px) {
+      .galeria {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .galeria {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>Click in the images to listen more about our Policy Briefings</h1>
+  <h1>Click in the images to listen more about Amazonian Trajectories</h1>
 
   <!-- ======= GALERIA ======= -->
   <div class="galeria">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/NrXhrRb8YWk?si=9IBvsIhldh_dVONx">
+    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/_BRdGshL2oo?si=6DxLD6FJOQPKqoUV">
+    <img src="imgs/thumb2.gif" class="thumb" data-video="https://www.youtube.com/embed/dtGHTN5gO_Q?si=FLZ6tvzvWeNdXKqL">
+    <img src="imgs/thumb3.gif" class="thumb" data-video="https://www.youtube.com/embed/-pJ4GEDEO4k?si=38JSft5kusmHK3m9">
+    <img src="imgs/thumb4.gif" class="thumb" data-video="https://www.youtube.com/embed/QO9xH2QnbDw?si=q7oTrI1vRBQnATr1">
+    <img src="imgs/thumb5.gif" class="thumb" data-video="https://www.youtube.com/embed/IawSiJVrenI?si=BfuuJQolRBc_aDlF">
+    <img src="imgs/thumb6.gif" class="thumb" data-video="https://www.youtube.com/embed/OlveV20sli0?si=kHlWoHFUTnREskOu">
+    <img src="imgs/thumb7.gif" class="thumb" data-video="https://www.youtube.com/embed/PeopEBE3_Z4?si=cKLOqeJWHtDVhTrh">
+    <img src="imgs/thumb8.gif" class="thumb" data-video="https://www.youtube.com/embed/I4NQchY_DC0?si=_9a2DuHnwTpVz8n8">
+    <img src="imgs/thumb9.gif" class="thumb" data-video="https://www.youtube.com/embed/iDrfWQAnOhQ?si=Ce5WQ_eKlNxMnvXV">
+    <img src="imgs/thumb10.gif" class="thumb" data-video="https://www.youtube.com/embed/GFIJ0qQPgR4?si=O8St_GE82teXvgnW">
+    <img src="imgs/thumb11.gif" class="thumb" data-video="https://www.youtube.com/embed/jBNTunlhAdA?si=LzwOi1957rou0xWt">
+    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/_BRdGshL2oo?si=6DxLD6FJOQPKqoUV">
   </div>
 
   <!-- ======= MODAL DE VÍDEO ======= -->
