@@ -11,6 +11,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
   </style>
 
+  <!-- Acelera conexões com YouTube / thumbnails -->
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
+
   <style>
     body {
       margin: 0;
@@ -38,7 +46,7 @@
       gap: 20px;
       justify-items: center;
       max-width: 1400px;
-      /* mais largo para caber bem os 5 vídeos */
+      /* espaço amplo para 5 colunas */
     }
 
     .thumb {
@@ -60,21 +68,20 @@
     .modal {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: rgba(0, 0, 0, 0.85);
       justify-content: center;
       align-items: center;
       z-index: 10;
+      padding: 24px;
     }
 
     .modal iframe {
-      width: 80%;
-      height: 60%;
+      width: min(1200px, 80vw);
+      height: min(675px, 60vh);
       border: none;
       border-radius: 10px;
+      background: #000;
     }
 
     .modal.active {
@@ -83,12 +90,13 @@
 
     .close-btn {
       position: absolute;
-      top: 30px;
-      right: 50px;
+      top: 24px;
+      right: 32px;
       font-size: 40px;
       color: white;
       cursor: pointer;
       user-select: none;
+      line-height: 1;
     }
 
     /* ======= RESPONSIVIDADE ======= */
@@ -123,32 +131,34 @@
   <h1>Click in the images to listen more about Amazonian Trajectories</h1>
 
   <!-- ======= GALERIA ======= -->
-<div class="galeria">
+  <div class="galeria">
+    <!-- URLs limpas (sem ?si=...) e com ?rel=0 -->
+    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/_BRdGshL2oo?rel=0">
+    <img src="imgs/thumb2.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/dtGHTN5gO_Q?rel=0">
+    <img src="imgs/thumb12.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/WRkI6E6VyqA?rel=0">
+    <img src="imgs/thumb3.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/-pJ4GEDEO4k?rel=0">
+    <img src="imgs/thumb4.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/QO9xH2QnbDw?rel=0">
 
-  <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/_BRdGshL2oo?si=6DxLD6FJOQPKqoUV?rel=0">
-  <img src="imgs/thumb2.gif" class="thumb" data-video="https://www.youtube.com/embed/dtGHTN5gO_Q?si=FLZ6tvzvWeNdXKqL?rel=0">
-  <img src="imgs/thumb12.gif" class="thumb" data-video="https://www.youtube.com/embed/WRkI6E6VyqA?si=Fw5wLu2e1YCJE4RC?rel=0">
-  <img src="imgs/thumb3.gif" class="thumb" data-video="https://www.youtube.com/embed/-pJ4GEDEO4k?si=38JSft5kusmHK3m9?rel=0">
-  <img src="imgs/thumb4.gif" class="thumb" data-video="https://www.youtube.com/embed/QO9xH2QnbDw?si=q7oTrI1vRBQnATr1?rel=0">
-  
-  <img src="imgs/thumb13.gif" class="thumb" data-video="https://www.youtube.com/embed/HQK0hOGhWnE?si=r6wHg_Bebj4sEXvU?rel=0">
-  <img src="imgs/thumb5.gif" class="thumb" data-video="https://www.youtube.com/embed/IawSiJVrenI?si=BfuuJQolRBc_aDlF?rel=0">
-  <img src="imgs/thumb6.gif" class="thumb" data-video="https://www.youtube.com/embed/OlveV20sli0?si=kHlWoHFUTnREskOu?rel=0">
-  <img src="imgs/thumb7.gif" class="thumb" data-video="https://www.youtube.com/embed/PeopEBE3_Z4?si=cKLOqeJWHtDVhTrh?rel=0">
-  <img src="imgs/thumb8.gif" class="thumb" data-video="https://www.youtube.com/embed/I4NQchY_DC0?si=_9a2DuHnwTpVz8n8?rel=0">
-  
-  <img src="imgs/thumb9.gif" class="thumb" data-video="https://www.youtube.com/embed/iDrfWQAnOhQ?si=Ce5WQ_eKlNxMnvXV?rel=0">
-  <img src="imgs/thumb10.gif" class="thumb" data-video="https://www.youtube.com/embed/GFIJ0qQPgR4?si=O8St_GE82teXvgnW?rel=0">
-  <img src="imgs/thumb11.gif" class="thumb" data-video="https://www.youtube.com/embed/jBNTunlhAdA?si=LzwOi1957rou0xWt?rel=0">
-  <img src="imgs/thumb14.gif" class="thumb" data-video="https://www.youtube.com/embed/F9xs9cl9Xfo?si=bOfpabTp6Hz9A6x4?rel=0">
-  <img src="imgs/thumb15.gif" class="thumb" data-video="https://www.youtube.com/embed/JZhKOOPTX9E?si=CHXg7KvA28sGkqLt?rel=0">
+    <img src="imgs/thumb13.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/HQK0hOGhWnE?rel=0">
+    <img src="imgs/thumb5.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/IawSiJVrenI?rel=0">
+    <img src="imgs/thumb6.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/OlveV20sli0?rel=0">
+    <img src="imgs/thumb7.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/PeopEBE3_Z4?rel=0">
+    <img src="imgs/thumb8.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/I4NQchY_DC0?rel=0">
 
-</div>
+    <img src="imgs/thumb9.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/iDrfWQAnOhQ?rel=0">
+    <img src="imgs/thumb10.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/GFIJ0qQPgR4?rel=0">
+    <img src="imgs/thumb11.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/jBNTunlhAdA?rel=0">
+    <img src="imgs/thumb14.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/F9xs9cl9Xfo?rel=0">
+    <img src="imgs/thumb15.gif" class="thumb" data-video="https://www.youtube-nocookie.com/embed/JZhKOOPTX9E?rel=0">
+  </div>
 
   <!-- ======= MODAL DE VÍDEO ======= -->
   <div class="modal" id="videoModal">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    <span class="close-btn" id="closeBtn" aria-label="Fechar">&times;</span>
+    <!-- iframe é inserido dinamicamente -->
+    <iframe id="videoFrame" title="YouTube video player" allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
   </div>
 
   <script>
@@ -157,25 +167,48 @@
     const iframe = document.getElementById('videoFrame');
     const closeBtn = document.getElementById('closeBtn');
 
+    // Monta URL final rapidamente (sem parâmetros desnecessários)
+    function buildUrl(base) {
+      // Se já tem '?', usamos '&', senão '?'
+      const join = base.includes('?') ? '&' : '?';
+      // rel=0 (mesmo canal), modestbranding, autoplay, playsinline
+      return `${base}${join}modestbranding=1&autoplay=1&playsinline=1`;
+    }
+
+    // Aquece a conexão com o YouTube no primeiro hover (ganho de ~100-300ms)
+    let warmed = false;
+    function warmConnections() {
+      if (warmed) return;
+      warmed = true;
+      ['https://www.youtube-nocookie.com', 'https://i.ytimg.com', 'https://www.google.com']
+        .forEach(href => {
+          const l = document.createElement('link');
+          l.rel = 'preconnect';
+          l.href = href;
+          document.head.appendChild(l);
+        });
+    }
+
+    // Abre vídeo ao clicar
     thumbs.forEach(img => {
+      img.addEventListener('pointerenter', warmConnections, { once: true }); // pré-aquece no primeiro hover
+
       img.addEventListener('click', () => {
-        const videoUrl = img.getAttribute('data-video') + '&autoplay=1';
-        iframe.src = videoUrl;
+        const baseUrl = img.getAttribute('data-video'); // já está com ?rel=0
+        iframe.src = buildUrl(baseUrl);
         modal.classList.add('active');
-      });
+      }, { passive: true });
     });
 
-    closeBtn.addEventListener('click', () => {
+    // Fecha e limpa (para parar o áudio imediatamente)
+    function closeModal() {
       iframe.src = '';
       modal.classList.remove('active');
-    });
+    }
 
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        iframe.src = '';
-        modal.classList.remove('active');
-      }
-    });
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
   </script>
 
 </body>
