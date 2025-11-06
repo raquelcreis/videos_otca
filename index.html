@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ORA Policy Briefings</title>
 
+  <!-- Fonte Sora -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
   </style>
@@ -27,14 +28,17 @@
       font-size: 2em;
       font-weight: 600;
       letter-spacing: 0.5px;
+      text-align: center;
     }
 
     .galeria {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); 
+      grid-template-columns: repeat(5, 1fr);
+      /* 5 vídeos por linha */
       gap: 20px;
       justify-items: center;
-      max-width: 1000px;
+      max-width: 1400px;
+      /* mais largo para caber bem os 5 vídeos */
     }
 
     .thumb {
@@ -87,7 +91,14 @@
       user-select: none;
     }
 
-        @media (max-width: 1000px) {
+    /* ======= RESPONSIVIDADE ======= */
+    @media (max-width: 1200px) {
+      .galeria {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
       .galeria {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -112,20 +123,27 @@
   <h1>Click in the images to listen more about Amazonian Trajectories</h1>
 
   <!-- ======= GALERIA ======= -->
-  <div class="galeria">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/_BRdGshL2oo?si=6DxLD6FJOQPKqoUV">
-    <img src="imgs/thumb2.gif" class="thumb" data-video="https://www.youtube.com/embed/dtGHTN5gO_Q?si=FLZ6tvzvWeNdXKqL">
-    <img src="imgs/thumb3.gif" class="thumb" data-video="https://www.youtube.com/embed/-pJ4GEDEO4k?si=38JSft5kusmHK3m9">
-    <img src="imgs/thumb4.gif" class="thumb" data-video="https://www.youtube.com/embed/QO9xH2QnbDw?si=q7oTrI1vRBQnATr1">
-    <img src="imgs/thumb5.gif" class="thumb" data-video="https://www.youtube.com/embed/IawSiJVrenI?si=BfuuJQolRBc_aDlF">
-    <img src="imgs/thumb6.gif" class="thumb" data-video="https://www.youtube.com/embed/OlveV20sli0?si=kHlWoHFUTnREskOu">
-    <img src="imgs/thumb7.gif" class="thumb" data-video="https://www.youtube.com/embed/PeopEBE3_Z4?si=cKLOqeJWHtDVhTrh">
-    <img src="imgs/thumb8.gif" class="thumb" data-video="https://www.youtube.com/embed/I4NQchY_DC0?si=_9a2DuHnwTpVz8n8">
-    <img src="imgs/thumb9.gif" class="thumb" data-video="https://www.youtube.com/embed/iDrfWQAnOhQ?si=Ce5WQ_eKlNxMnvXV">
-    <img src="imgs/thumb10.gif" class="thumb" data-video="https://www.youtube.com/embed/GFIJ0qQPgR4?si=O8St_GE82teXvgnW">
-    <img src="imgs/thumb11.gif" class="thumb" data-video="https://www.youtube.com/embed/jBNTunlhAdA?si=LzwOi1957rou0xWt">
-    <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/_BRdGshL2oo?si=6DxLD6FJOQPKqoUV">
-  </div>
+<div class="galeria">
+
+  <img src="imgs/thumb1.gif" class="thumb" data-video="https://www.youtube.com/embed/_BRdGshL2oo?si=6DxLD6FJOQPKqoUV?rel=0">
+  <img src="imgs/thumb2.gif" class="thumb" data-video="https://www.youtube.com/embed/dtGHTN5gO_Q?si=FLZ6tvzvWeNdXKqL?rel=0">
+  <img src="imgs/thumb12.gif" class="thumb" data-video="https://www.youtube.com/embed/WRkI6E6VyqA?si=Fw5wLu2e1YCJE4RC?rel=0">
+  <img src="imgs/thumb3.gif" class="thumb" data-video="https://www.youtube.com/embed/-pJ4GEDEO4k?si=38JSft5kusmHK3m9?rel=0">
+  <img src="imgs/thumb4.gif" class="thumb" data-video="https://www.youtube.com/embed/QO9xH2QnbDw?si=q7oTrI1vRBQnATr1?rel=0">
+  
+  <img src="imgs/thumb13.gif" class="thumb" data-video="https://www.youtube.com/embed/HQK0hOGhWnE?si=r6wHg_Bebj4sEXvU?rel=0">
+  <img src="imgs/thumb5.gif" class="thumb" data-video="https://www.youtube.com/embed/IawSiJVrenI?si=BfuuJQolRBc_aDlF?rel=0">
+  <img src="imgs/thumb6.gif" class="thumb" data-video="https://www.youtube.com/embed/OlveV20sli0?si=kHlWoHFUTnREskOu?rel=0">
+  <img src="imgs/thumb7.gif" class="thumb" data-video="https://www.youtube.com/embed/PeopEBE3_Z4?si=cKLOqeJWHtDVhTrh?rel=0">
+  <img src="imgs/thumb8.gif" class="thumb" data-video="https://www.youtube.com/embed/I4NQchY_DC0?si=_9a2DuHnwTpVz8n8?rel=0">
+  
+  <img src="imgs/thumb9.gif" class="thumb" data-video="https://www.youtube.com/embed/iDrfWQAnOhQ?si=Ce5WQ_eKlNxMnvXV?rel=0">
+  <img src="imgs/thumb10.gif" class="thumb" data-video="https://www.youtube.com/embed/GFIJ0qQPgR4?si=O8St_GE82teXvgnW?rel=0">
+  <img src="imgs/thumb11.gif" class="thumb" data-video="https://www.youtube.com/embed/jBNTunlhAdA?si=LzwOi1957rou0xWt?rel=0">
+  <img src="imgs/thumb14.gif" class="thumb" data-video="https://www.youtube.com/embed/F9xs9cl9Xfo?si=bOfpabTp6Hz9A6x4?rel=0">
+  <img src="imgs/thumb15.gif" class="thumb" data-video="https://www.youtube.com/embed/JZhKOOPTX9E?si=CHXg7KvA28sGkqLt?rel=0">
+
+</div>
 
   <!-- ======= MODAL DE VÍDEO ======= -->
   <div class="modal" id="videoModal">
@@ -141,7 +159,7 @@
 
     thumbs.forEach(img => {
       img.addEventListener('click', () => {
-        const videoUrl = img.getAttribute('data-video') + '?autoplay=1';
+        const videoUrl = img.getAttribute('data-video') + '&autoplay=1';
         iframe.src = videoUrl;
         modal.classList.add('active');
       });
